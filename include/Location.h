@@ -30,7 +30,7 @@ class Location{
         Location();
 
         virtual void display();
-        virtual void displayExits() const;
+        void displayExits() const;
         void displayItems() const;
         void addExit();
         void addItems();
@@ -47,21 +47,18 @@ class Tree : public Location{
 
     Tree();
     void display() override;
-    void displayExits() const override;
 };
 
 class DoorHallway : public Location{
 
     DoorHallway();
     void display() override;
-    void displayExits() const override;
 };
 
 class PhantomForest : public Location{
     
     PhantomForest();
     void display() override;
-    void displayExits() const override;
 
 };
 
@@ -69,42 +66,36 @@ class RedCastle : public Location{
 
     RedCastle();
     void display() override;
-    void displayExits() const override;
 };
 
 class RedCastleCourt : public Location{
 
     RedCastleCourt();
     void display() override;
-    void displayExits() const override;
 };
 
 class RedRoad : public Location{
 
     RedRoad();
     void display() override;
-    void displayExits() const override;
 };
 
 class Lake : public Location{
 
     Lake();
     void display() override;
-    void displayExits() const override;
 };
 
 class MadHouse : public Location{
 
     MadHouse();
     void display() override;
-    void displayExits() const override;
 };
 
 class WhiteCastle: public Location{
 
     WhiteCastle();
     void display() override;
-    void displayExits() const override;
 };
 
 //Create a generic MazeRoom class and make instances of it when the game starts.
@@ -112,14 +103,12 @@ class MazeRoom: public Location{
 
     MazeRoom();
     void display() override;
-    void displayExits() const override;
 };
 
 class DeadForest: public Location{
 
     DeadForest();
     void display() override;
-    void displayExits() const override;
 };
 
 #endif

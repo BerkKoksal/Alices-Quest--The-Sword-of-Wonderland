@@ -13,14 +13,32 @@ using namespace std;
 void Location::display(){
     if(firstVisit){
         cout << firstDescription << endl;
+        displayItems();
         firstVisit = false;
     }
     else{
         cout << "You are at " << name << " again." << endl; 
-        displayExits();
+        displayItems();
     }
 }
 
 void Location::displayExits() const{
-    cout<<"There are a few exits out of here" << endl;
+    //Not a thing in the current version of the game, however added in case of future expansions
+    if (roomExits.empty()){
+        cout<< "There are no exits out of this room" << endl;
+    }
+    else{
+        cout << "Available exits: " << endl;
+        for (const pair<string, Location*>& exit : roomExits){
+            cout << exit.first << " " ;
+        }
+        cout << endl;
+    }
+}
+
+void Location::displayItems() const{
+    
+    for (int i = 0; i < items.size(); i++){
+         
+    }
 }
